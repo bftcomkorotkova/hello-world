@@ -14,7 +14,13 @@ info:
 servers:
   - url: 'http://localhohttps://api.openweathermap.org/data/2.5st:3000'
     description: prod
-paths: {}
+paths:
+  /weather:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses: {}
+      operationId: get-weather
 components:
   schemas: {}
   securitySchemes:
