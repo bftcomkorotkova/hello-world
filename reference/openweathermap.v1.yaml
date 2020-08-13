@@ -27,6 +27,7 @@ paths:
             application/json:
               schema:
                 type: object
+                description: optional
                 properties:
                   coord:
                     type: object
