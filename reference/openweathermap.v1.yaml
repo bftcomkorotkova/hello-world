@@ -156,13 +156,14 @@ paths:
 components:
   schemas:
     unauthorized_response:
-      title: unauthorized_response
+      title: '401'
       type: object
       properties:
         code:
           type: integer
         message:
           type: string
+      description: ''
   securitySchemes:
     app_id:
       name: appid
