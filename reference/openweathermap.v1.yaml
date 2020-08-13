@@ -154,7 +154,15 @@ paths:
       security:
         - app_id: []
 components:
-  schemas: {}
+  schemas:
+    unauthorized_response:
+      title: unauthorized_response
+      type: object
+      properties:
+        code:
+          type: integer
+        message:
+          type: string
   securitySchemes:
     app_id:
       name: appid
