@@ -18,9 +18,18 @@ paths:
   /weather:
     get:
       summary: Your GET endpoint
-      tags: []
+      tags:
+        - Weather endpoints
       responses: {}
       operationId: get-weather
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: zip
+          description: '**Zip code**.Search by zip code.'
+      security:
+        - app_id: []
 components:
   schemas: {}
   securitySchemes:
@@ -28,3 +37,5 @@ components:
       name: appid
       type: apiKey
       in: query
+tags:
+  - name: Weather endpoints
