@@ -144,6 +144,16 @@ paths:
                         main: string
                         description: string
                         icon: string
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  '':
+                    $ref: '#/components/schemas/unauthorized_response'
+              examples: {}
       operationId: get-weather
       parameters:
         - schema:
@@ -156,14 +166,17 @@ paths:
 components:
   schemas:
     unauthorized_response:
-      title: '401'
+      title: 401
       type: object
+      description: ''
       properties:
         code:
           type: integer
         message:
           type: string
-      description: ''
+      required:
+        - code
+        - message
   securitySchemes:
     app_id:
       name: appid
