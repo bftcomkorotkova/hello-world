@@ -20,7 +20,10 @@ paths:
       summary: Your GET endpoint
       tags:
         - Weather endpoints
-      responses: {}
+      responses:
+        '200':
+          description: ok
+          headers: {}
       operationId: get-weather
       parameters:
         - schema:
