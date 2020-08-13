@@ -34,14 +34,19 @@ paths:
                     properties:
                       lon:
                         type: number
+                        description: Геолокация города
                       lat:
                         type: number
+                        description: Геолокация города
                   cod:
                     type: number
+                    description: параметр
                   name:
                     type: string
+                    description: Имя
                   id:
                     type: number
+                    description: ID города
                   timezone:
                     type: number
                   sys:
