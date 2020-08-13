@@ -22,8 +22,122 @@ paths:
         - Weather endpoints
       responses:
         '200':
-          description: ok
-          headers: {}
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  coord:
+                    type: object
+                    properties:
+                      lon:
+                        type: number
+                      lat:
+                        type: number
+                  cod:
+                    type: number
+                  name:
+                    type: string
+                  id:
+                    type: number
+                  timezone:
+                    type: number
+                  sys:
+                    type: object
+                    properties:
+                      type:
+                        type: number
+                      id:
+                        type: number
+                      country:
+                        type: string
+                      sunrise:
+                        type: number
+                      sunset:
+                        type: number
+                  dt:
+                    type: number
+                  clouds:
+                    type: object
+                    properties:
+                      all:
+                        type: number
+                  wind:
+                    type: object
+                    properties:
+                      speed:
+                        type: number
+                      deg:
+                        type: number
+                  visibility:
+                    type: number
+                  main:
+                    type: object
+                    properties:
+                      temp:
+                        type: number
+                      feels_like:
+                        type: number
+                      temp_min:
+                        type: number
+                      temp_max:
+                        type: number
+                      pressure:
+                        type: number
+                      humidity:
+                        type: number
+                  base:
+                    type: string
+                  weather:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: number
+                        main:
+                          type: string
+                        description:
+                          type: string
+                        icon:
+                          type: string
+              examples:
+                example-1:
+                  value:
+                    coord:
+                      lon: 0
+                      lat: 0
+                    cod: 0
+                    name: string
+                    id: 0
+                    timezone: 0
+                    sys:
+                      type: 0
+                      id: 0
+                      country: string
+                      sunrise: 0
+                      sunset: 0
+                    dt: 0
+                    clouds:
+                      all: 0
+                    wind:
+                      speed: 0
+                      deg: 0
+                    visibility: 0
+                    main:
+                      temp: 0
+                      feels_like: 0
+                      temp_min: 0
+                      temp_max: 0
+                      pressure: 0
+                      humidity: 0
+                    base: string
+                    weather:
+                      - id: 0
+                        main: string
+                        description: string
+                        icon: string
       operationId: get-weather
       parameters:
         - schema:
