@@ -109,7 +109,7 @@ paths:
                         icon:
                           type: string
               examples:
-                example-1:
+                example:
                   value:
                     coord:
                       lon: -121.95
