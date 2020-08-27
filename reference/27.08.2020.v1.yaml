@@ -236,9 +236,6 @@ components:
           type: integer
         message:
           type: string
-      required:
-        - cod
-        - message
   securitySchemes:
     app_id:
       name: appid
