@@ -20,7 +20,152 @@ paths:
       summary: Your GET endpoint
       tags:
         - Weather endpoints
-      responses: {}
+      responses:
+        '200':
+          description: OK
+          headers: {}
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  coord:
+                    type: object
+                    properties:
+                      lon:
+                        type: number
+                        description: '-121.95'
+                      lat:
+                        type: number
+                        description: '37.35'
+                  cod:
+                    type: number
+                    description: '200'
+                  name:
+                    type: string
+                    description: Santa Clara
+                  id:
+                    type: number
+                    description: '0'
+                  timezone:
+                    type: number
+                    description: '-28800'
+                  sys:
+                    type: object
+                    properties:
+                      type:
+                        type: number
+                        description: '1'
+                      id:
+                        type: number
+                        description: '5845'
+                      countri:
+                        type: string
+                        description: US
+                      sunrise:
+                        type: number
+                        description: '1579360793'
+                      sunset:
+                        type: number
+                        description: '1579396557'
+                  dt:
+                    type: number
+                    description: '1579415808'
+                  clouds:
+                    type: object
+                    properties:
+                      all:
+                        type: number
+                        description: '75'
+                  wind:
+                    type: object
+                    properties:
+                      speed:
+                        type: number
+                        description: '2.57'
+                      deg:
+                        type: number
+                        description: '36'
+                  visibility:
+                    type: number
+                    description: '16093'
+                  main:
+                    type: object
+                    properties:
+                      temp:
+                        type: number
+                        description: '45.25'
+                      feels_like:
+                        type: number
+                        description: '41.16'
+                      temp_min:
+                        type: number
+                        description: '41'
+                      temp_max:
+                        type: number
+                        description: '50'
+                      pressure:
+                        type: number
+                        description: '1026'
+                      humidity:
+                        type: number
+                        description: '75'
+                  base:
+                    type: string
+                    description: stations
+                  weather:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: number
+                          description: '803'
+                        main:
+                          type: string
+                          description: Clouds
+                        description:
+                          type: string
+                          description: broken clouds
+                        icon:
+                          type: string
+                          description: 04n
+              examples:
+                example:
+                  value:
+                    coord:
+                      lon: -121.95
+                      lat: 37.35
+                    weather:
+                      - id: 803
+                        main: Clouds
+                        description: broken clouds
+                        icon: 04n
+                    base: stations
+                    main:
+                      temp: 45.25
+                      feels_like: 41.16
+                      temp_min: 41
+                      temp_max: 50
+                      pressure: 1026
+                      humidity: 75
+                    visibility: 16093
+                    wind:
+                      speed: 2.57
+                      deg: 36
+                    clouds:
+                      all: 75
+                    dt: 1579415808
+                    sys:
+                      type: 1
+                      id: 5845
+                      country: US
+                      sunrise: 1579360793
+                      sunset: 1579396557
+                    timezone: -28800
+                    id: 0
+                    name: Santa Clara
+                    cod: 200
       operationId: get-weather
       description: 'Access current weather data for any location on Earth including over 200,000 cities! Current weather is frequently updated based on global models and data from more than 40,000 weather stations.'
       parameters:
