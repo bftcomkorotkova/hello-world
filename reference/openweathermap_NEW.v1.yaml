@@ -220,7 +220,19 @@ paths:
       security:
         - app_id: []
 components:
-  schemas: {}
+  schemas:
+    unauthorized_response:
+      title: 401
+      type: object
+      description: ''
+      properties:
+        cod:
+          type: integer
+        message:
+          type: string
+      required:
+        - cod
+        - message
   securitySchemes:
     app_id:
       name: appid
