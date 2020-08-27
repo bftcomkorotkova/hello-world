@@ -169,7 +169,17 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/unauthorized_response'
+                type: object
+                properties:
+                  cod:
+                    type: integer
+                    description: Status code
+                  message:
+                    type: string
+                    description: Explains why you received this message
+                required:
+                  - cod
+                  - message
       operationId: get-weather
       description: 'Access current weather data for any location on Earth including over 200,000 cities! Current weather is frequently updated based on global models and data from more than 40,000 weather stations.'
       parameters:
@@ -236,6 +246,9 @@ components:
           type: integer
         message:
           type: string
+      required:
+        - cod
+        - message
   securitySchemes:
     app_id:
       name: appid
