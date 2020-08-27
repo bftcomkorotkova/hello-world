@@ -18,8 +18,6 @@ paths:
   /weather:
     get:
       summary: Your GET endpoint
-      tags:
-        - Weather endpoints
       responses:
         '200':
           description: OK
@@ -225,6 +223,8 @@ paths:
           description: '**Mode*. *Example: html. Determines the format of the response. Possible values are `json`, `xml`, and `html`. If the mode parameter is empty, the format is `json` by default'
       security:
         - app_id: []
+      tags:
+        - Weather endpoints
 components:
   schemas:
     unauthorized_response:
