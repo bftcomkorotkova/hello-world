@@ -32,85 +32,85 @@ paths:
                     properties:
                       lon:
                         type: number
-                        description: '-121.95'
+                        description: 'City geo location, longitude'
                       lat:
                         type: number
-                        description: '37.35'
+                        description: 'City geo location, longitude'
                   cod:
                     type: number
-                    description: '200'
+                    description: Internal parameter
                   name:
                     type: string
-                    description: Santa Clara
+                    description: Name
                   id:
                     type: number
-                    description: '0'
+                    description: City ID
                   timezone:
                     type: number
-                    description: '-28800'
+                    description: The timezone for the station
                   sys:
                     type: object
                     properties:
                       type:
                         type: number
-                        description: '1'
+                        description: Internal parameter
                       id:
                         type: number
-                        description: '5845'
+                        description: Internal parameter
                       countri:
                         type: string
-                        description: US
+                        description: 'Country code (GB, JP etc.)'
                       sunrise:
                         type: number
-                        description: '1579360793'
+                        description: 'Sunrise time, unix, UTC'
                       sunset:
                         type: number
-                        description: '1579396557'
+                        description: 'Sunrise time, unix, UTC'
                   dt:
                     type: number
-                    description: '1579415808'
+                    description: 'Time of data calculation, unix, UTC'
                   clouds:
                     type: object
                     properties:
                       all:
                         type: number
-                        description: '75'
+                        description: 'Cloudiness, %'
                   wind:
                     type: object
                     properties:
                       speed:
                         type: number
-                        description: '2.57'
+                        description: 'Wind speed. Unit Default: meter/sec, Metric: meter/sec, Imperial: miles/hour.'
                       deg:
                         type: number
-                        description: '36'
+                        description: 'Wind direction, degrees (meteorological)'
                   visibility:
                     type: number
-                    description: '16093'
+                    description: 'Visibility, meter'
                   main:
                     type: object
                     properties:
                       temp:
                         type: number
-                        description: '45.25'
+                        description: 'Temperature. Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit.'
                       feels_like:
                         type: number
-                        description: '41.16'
+                        description: What the weather feels like despite the actual numbers
                       temp_min:
                         type: number
-                        description: '41'
+                        description: 'Minimum temperature at the moment. This is deviation from current temp that is possible for large cities and megalopolises geographically expanded (use these parameter optionally). Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit.'
                       temp_max:
                         type: number
-                        description: '50'
+                        description: 'Maximum temperature at the moment. This is deviation from current temp that is possible for large cities and megalopolises geographically expanded (use these parameter optionally). Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit.'
                       pressure:
                         type: number
-                        description: '1026'
+                        description: 'Atmospheric pressure (on the sea level, if there is no sea_level or grnd_level data), hPa'
                       humidity:
                         type: number
-                        description: '75'
+                        description: 'Humidity, %'
                   base:
                     type: string
-                    description: stations
+                    description: Internal parameter
                   weather:
                     type: array
                     items:
@@ -118,16 +118,16 @@ paths:
                       properties:
                         id:
                           type: number
-                          description: '803'
+                          description: Weather condition id
                         main:
                           type: string
-                          description: Clouds
+                          description: 'Group of weather parameters (Rain, Snow, Extreme etc.)'
                         description:
                           type: string
-                          description: broken clouds
+                          description: Weather condition within the group
                         icon:
                           type: string
-                          description: 04n
+                          description: Weather icon id
               examples:
                 example:
                   value:
